@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Torre 2 - Servidores, File Servers e Datacenter | AGIS</title>
+    <link rel="stylesheet" href="agis-core.css">
+    <style>
+        body { padding: 32px; }
+        .wrapper { max-width: 1280px; margin: auto; }
+        .titulo { text-align:center; font-size:32px; margin-bottom:10px; color:var(--agis-azul-primario); }
+        .subtitulo { text-align:center; font-size:15px; color:var(--agis-cinza-2); margin-bottom:35px; }
+
+        .secao {
+            background:var(--agis-branco);
+            border:1px solid var(--agis-cinza-3);
+            border-radius:14px;
+            padding:24px;
+            margin-bottom:32px;
+            box-shadow:0 6px 14px rgba(0,0,0,0.06);
+        }
+
+        h2 { font-size:22px; color:var(--agis-azul-secundario); margin-bottom:12px; }
+        p { font-size:14px; line-height:1.5; color:var(--agis-cinza-1); margin-bottom:12px; }
+
+        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
+        .box {
+            background:var(--agis-cinza-4);
+            border:1px solid var(--agis-cinza-3);
+            border-radius:12px;
+            padding:16px;
+        }
+        .box h3 { font-size:16px; color:var(--agis-azul-primario); margin-bottom:8px; }
+        ul { margin-left:20px; }
+        li { font-size:13px; margin-bottom:4px; }
+
+        pre {
+            background:var(--agis-cinza-4);
+            padding:16px;
+            border-radius:10px;
+            font-size:12px;
+            overflow-x:auto;
+        }
+
+        .tag {
+            display:inline-block;
+            font-size:11px;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            padding:3px 8px;
+            border-radius:999px;
+            border:1px solid var(--agis-cinza-3);
+            background:#f9f9f9;
+            margin-bottom:8px;
+            color:var(--agis-cinza-2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <h1 class="titulo">TORRE 2 — Servidores, File Servers e Datacenter</h1>
+    <p class="subtitulo">
+        Responsável por toda camada de processamento, armazenamento e serviços de aplicação corporativos da AGIS,
+        na Matriz, nas obras e no Datacenter SBA.
+    </p>
+
+    <div class="secao">
+        <span class="tag">Missão</span>
+        <h2>Missão da Torre</h2>
+        <p>
+            Garantir que todos os servidores, file servers e ambientes de Datacenter operem com disponibilidade,
+            segurança, performance e capacidade adequadas para suportar o negócio, aplicações críticas, banco de dados
+            e arquivos corporativos.
+        </p>
+        <p>
+            Esta torre é o núcleo de processamento da TI: tudo o que roda em servidores físicos ou virtuais passa por aqui —
+            desde o Active Directory até as aplicações corporativas e o armazenamento de arquivos de obra.
+        </p>
+    </div>
+
+    <div class="secao">
+        <span class="tag">Escopo</span>
+        <h2>Escopo da Torre</h2>
+        <div class="grid">
+            <div class="box">
+                <h3>Servidores na Matriz</h3>
+                <ul>
+                    <li>Servidores Windows e Linux no CPD (6º andar)</li>
+                    <li>Serviços internos de apoio (AD, utilitários, serviços locais)</li>
+                    <li>Integração com switches core e firewalls Fortigate</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Servidores de Obra</h3>
+                <ul>
+                    <li>Servidores de obra para acesso a file server local</li>
+                    <li>Ambientes de obras “encerradas mas ativas” para consulta</li>
+                    <li>Sincronização/controladoria de dados com Datacenter</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Datacenter SBA / Matrix</h3>
+                <ul>
+                    <li>Servidores de aplicação corporativa</li>
+                    <li>Servidores de banco de dados</li>
+                    <li>Ambientes de homologação e desenvolvimento</li>
+                    <li>Servicedesk, Zabbix e demais serviços corporativos</li>
+                    <li>Storage corporativo e de obras finalizadas (OwnCloud)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>File Servers e Armazenamento</h3>
+                <ul>
+                    <li>File server da Matriz</li>
+                    <li>File servers de obras</li>
+                    <li>Storage de obras finalizadas (Owncloud / Datacenter)</li>
+                    <li>Estrutura de pastas corporativas, departamentos e projetos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="secao">
+        <span class="tag">Camadas</span>
+        <h2>Camadas de Serviços de Servidor</h2>
+        <div class="grid">
+            <div class="box">
+                <h3>Camada de Diretório e Autenticação</h3>
+                <ul>
+                    <li>Active Directory (domínio FGuedes)</li>
+                    <li>Controladores de domínio distribuídos (Matriz, obras, SBA)</li>
+                    <li>Integração com VPNs, WiFi e serviços internos</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Camada de Aplicação</h3>
+                <ul>
+                    <li>Servidores de aplicação Protheus, RM e sistemas de engenharia (no DC)</li>
+                    <li>Servidores web internos e externos</li>
+                    <li>Serviços de integração, APIs e middlewares</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Camada de Banco de Dados</h3>
+                <ul>
+                    <li>Servidores de banco (SQL Server, outros)</li>
+                    <li>Instâncias de produção, homologação e desenvolvimento</li>
+                    <li>Rotinas de manutenção (índices, integridade, jobs)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Camada de Arquivos</h3>
+                <ul>
+                    <li>Shares de departamentos</li>
+                    <li>Shares de projetos e obras</li>
+                    <li>Estratégias de cotas, organização e segurança de pastas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="secao">
+        <span class="tag">Datacenter</span>
+        <h2>Datacenter SBA / Matrix</h2>
+        <p>
+            O Datacenter é o backbone de processamento da AGIS. Nessa torre, a equipe coordena:
+        </p>
+        <ul>
+            <li>Relacionamento técnico com a Matrix / SBA</li>
+            <li>Gestão de capacidade (CPU, RAM, disco, IOPS)</li>
+            <li>Requisições de novos servidores ou expansão de recursos</li>
+            <li>Regras NAT, VPNs e rotas com a Matriz</li>
+        </ul>
+        <p>
+            Toda a parte de servidores corporativos principais (ERP, bancos, sistemas de apoio e monitoramento) está
+            diretamente ligada a esta torre e é tratada em conjunto com a Torre 1 (redes) e Torre 6 (monitoramento).
+        </p>
+    </div>
+
+    <div class="secao">
+        <span class="tag">Backup</span>
+        <h2>Backup e Recuperação</h2>
+        <div class="grid">
+            <div class="box">
+                <h3>Backup de Servidores</h3>
+                <ul>
+                    <li>Backup Acronis no Datacenter SBA</li>
+                    <li>Rotinas diárias de backup de aplicação, banco e arquivos</li>
+                    <li>Backups full, diferenciais e incrementais conforme política</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Recuperação e Testes</h3>
+                <ul>
+                    <li>Testes de restore em ambientes de homologação</li>
+                    <li>Restores pontuais para recuperação de arquivos e bases</li>
+                    <li>Ajuste de janelas de backup conforme crescimento de dados</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="secao">
+        <span class="tag">Operação</span>
+        <h2>Operação Diária da Torre 2</h2>
+        <ul>
+            <li>Provisionar novos servidores (em conjunto com Matrix/SBA)</li>
+            <li>Ajustar e acompanhar uso de CPU, RAM, disco e rede dos servidores</li>
+            <li>Controlar espaço de file servers e storage</li>
+            <li>Atuar em incidentes de indisponibilidade de serviços</li>
+            <li>Manter inventário de servidores e serviços hospedados</li>
+            <li>Alinhar com times de sistemas/ERP sobre janelas de manutenção</li>
+        </ul>
+    </div>
+
+    <div class="secao">
+        <span class="tag">Integrações</span>
+        <h2>Integrações com Outras Torres</h2>
+        <div class="grid">
+            <div class="box">
+                <h3>Com Torre 1 — Redes</h3>
+                <ul>
+                    <li>Dependência total de VPNs, VLANs e rotas</li>
+                    <li>Necessidade de baixa latência e banda adequada</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Com Torre 3 — Suporte</h3>
+                <ul>
+                    <li>Atendimentos de usuários em relação a file server</li>
+                    <li>Demandas de espaço, permissões e lentidão</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Com Torre 4 — Ativos</h3>
+                <ul>
+                    <li>Inventário de servidores</li>
+                    <li>Relação de sistemas e aplicações hospedadas</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Com Torre 6 — Monitoramento</h3>
+                <ul>
+                    <li>Monitoramento de disponibilidade de servidores</li>
+                    <li>Alertas de CPU/RAM/disco/serviços críticos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

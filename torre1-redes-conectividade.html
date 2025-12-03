@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Torre 1 - Redes e Conectividade | AGIS</title>
+    <link rel="stylesheet" href="agis-core.css">
+    <style>
+        body { padding: 32px; }
+        .wrapper { max-width: 1280px; margin: auto; }
+        .titulo { text-align:center; font-size:32px; margin-bottom:10px; color:var(--agis-azul-primario); }
+        .subtitulo { text-align:center; font-size:15px; color:var(--agis-cinza-2); margin-bottom:35px; }
+        .secao {
+            background:var(--agis-branco);
+            border:1px solid var(--agis-cinza-3);
+            border-radius:14px;
+            padding:24px;
+            margin-bottom:32px;
+            box-shadow:0 6px 14px rgba(0,0,0,0.06);
+        }
+        h2 { font-size:22px; color:var(--agis-azul-secundario); margin-bottom:12px; }
+        p { font-size:14px; line-height:1.5; color:var(--agis-cinza-1); margin-bottom:12px; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
+        .box {
+            background:var(--agis-cinza-4);
+            border:1px solid var(--agis-cinza-3);
+            border-radius:12px;
+            padding:16px;
+        }
+        .box h3 { font-size:16px; color:var(--agis-azul-primario); margin-bottom:8px; }
+        ul { margin-left:20px; }
+        li { font-size:13px; margin-bottom:4px; }
+        pre {
+            background:var(--agis-cinza-4);
+            padding:16px;
+            border-radius:10px;
+            font-size:12px;
+            overflow-x:auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <h1 class="titulo">TORRE 1 — Redes e Conectividade</h1>
+    <p class="subtitulo">Responsável por toda comunicação corporativa, estabilidade, segurança e tráfego entre Matriz, obras e Datacenter.</p>
+
+    <div class="secao">
+        <h2>Missão</h2>
+        <p>Assegurar conectividade estável, segura e monitorada 24/7 para todas as unidades da AGIS — Matriz, obras e Datacenter SBA — garantindo operação contínua dos sistemas corporativos, colaboração entre equipes e comunicação interna e externa.</p>
+    </div>
+
+    <div class="secao">
+        <h2>Escopo da Torre</h2>
+        <div class="grid">
+            <div class="box">
+                <h3>Infraestrutura Física</h3>
+                <ul>
+                    <li>Switches HP/Aruba (1930, 1830 e 1950 HA)</li>
+                    <li>Roteadores e balanceamentos</li>
+                    <li>Cabeamento estruturado (CPD e andares)</li>
+                    <li>Instalação e organização de racks</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Firewall e Segurança</h3>
+                <ul>
+                    <li>Fortigate HA</li>
+                    <li>NAT interno (ROX)</li>
+                    <li>NAT externo e links (ITS)</li>
+                    <li>VPN IPSEC com SBA</li>
+                    <li>VPN FortiClient para usuários</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>WiFi Corporativo</h3>
+                <ul>
+                    <li>Ubiquiti Controller (Matriz)</li>
+                    <li>APs distribuídos por andar</li>
+                    <li>SSIDs: AGIS CORPORATIVO, TI, VISITANTES, DIRETORIA, MOBILE</li>
+                    <li>Rede configurada para densidade e roaming</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Conectividade das Obras</h3>
+                <ul>
+                    <li>Links dedicados / fibra / 4G / 5G</li>
+                    <li>Projeto e instalação de redes locais de obra</li>
+                    <li>VPN site-to-site</li>
+                    <li>Configuração de switches e WiFi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="secao">
+        <h2>Links de Internet</h2>
+        <div class="box">
+            <ul>
+                <li>Vivo — 600 Mbps (tráfego geral)</li>
+                <li>Hostfiber — 100 Mbps (VPNs) *em troca para Mundivox*</li>
+                <li>America Net — 100 Mbps (redundância) *avaliação MPLS*</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="secao">
+        <h2>Arquitetura WiFi — Matriz</h2>
+        <pre>
+9º ANDAR – Diretoria
+• 3 APs Ubiquiti
+• Suporte às salas Yealink
+
+8º ANDAR – Administrativo
+• 3 APs
+
+7º ANDAR – Engenharia
+• 2 APs
+
+6º ANDAR – TI / CPD / Documentação
+• 3 APs
+• Backbone da rede AGIS
+        </pre>
+    </div>
+
+    <div class="secao">
+        <h2>Segmentação de Rede</h2>
+        <div class="box">
+            <ul>
+                <li>VLANs administrativas</li>
+                <li>VLANs engenharia / sistemas</li>
+                <li>VLANs obras</li>
+                <li>VLAN CFTV</li>
+                <li>VLAN servidores</li>
+                <li>VLAN visitantes</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="secao">
+        <h2>Monitoramento</h2>
+        <p>A Torre 1 possui integração total com o Zabbix para acompanhamento em tempo real:</p>
+        <ul>
+            <li>Links (latência, perdas e UP/DOWN)</li>
+            <li>APs Ubiquiti</li>
+            <li>Switches HP/Aruba</li>
+            <li>Firewalls Fortigate</li>
+            <li>VPNs Datacenter e obras</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
